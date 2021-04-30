@@ -1,25 +1,35 @@
-import React, { useState } from "react";
-import { render } from "react-dom";
+import React, { useState, useEffect } from "react";
 import TinderCard from "react-tinder-card";
+import database from "./firebase";
+import "./TinderCards.css";
 
 function TinderCards() {
-  const [people, setPeople] = useState([
-    {
-      name: "Steve Jobs",
-      url:
-        "https://www.mac-history.de/wp-content/uploads/2011/10/steve_jobs_1955_2011.jpg",
-    },
-    {
-      name: "Darth Vader",
-      url: "http://www.globalo.com/content/uploads/2015/12/darth-vader.jpg",
-    },
-  ]);
+  const [people, setPeople] = useState([]);
 
-  return
-  (
-    <div>
-      <h1>Cards</h1>
-  
+//Piece of code which runs based on a condition
+
+  useEffect(() => {
+      //this is where the code runs..
+
+      const unsubscribe = database
+        .collection("people")
+        .onSnapshot((snapshot) => 
+          setPeople(snapshot.docs.map((doc) => doc.data()))
+      );
+
+      return () => {
+
+        //this is the cleanup...
+        unsubscribe(); 
+
+      };
+
+      //this will run ONCE when the component loads, and never again.
+  }, []);
+
+  return ( 
+  <div>
+  <div className="tinderCards__cardContainer">
       {people.map((person) => (
         <TinderCard className="swipe" key={person.name}>
           <div
@@ -30,6 +40,7 @@ function TinderCards() {
           </div>
         </TinderCard>
       ))}
+      </div>
     </div>
     );
 
