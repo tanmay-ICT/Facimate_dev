@@ -18,7 +18,6 @@ function App() {
         <Route path="/chat/:person">
             <Header backButton ="/chat" />
             <ChatScreen />
-            {/* <Chats /> */}
           </Route>
           <Route path="/chat">
             <Header backButton ="/" />
@@ -26,7 +25,7 @@ function App() {
           </Route>
           <Route path="/">
             <Header />
-            <h1> Homepage </h1>
+            <h1 className="explore"> Explore </h1>
             <TinderCards />
             <SwipeButtons />
           </Route>

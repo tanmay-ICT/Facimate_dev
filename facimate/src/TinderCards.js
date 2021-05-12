@@ -31,12 +31,25 @@ function TinderCards() {
   <div>
   <div className="tinderCards__cardContainer">
       {people.map((person) => (
-        <TinderCard className="swipe" key={person.name}>
-          <div
-            style={{ backgroundImage: `url(${person.url})` }}
-            className="card"
-          >
-            <h3>{person.name}</h3>
+        <TinderCard className="swipe" key={person.name && person.distance && person.age && person.location}>
+          <div className="card">
+            <div className="pro_info">
+              <div
+                 style={{ backgroundImage: `url(${person.url})` }}
+                 className="image">
+                </div>
+                  <div className="details">
+                  <h2 className="details_h2">{person.name}</h2>
+                  <h3 className="details_h3">{person.distance} km away</h3>
+                  <h4 className="details_h4">{person.age} years old</h4>
+                  <h4 className="details_h4">{person.location}</h4>
+                  <p className=
+                  "likelyMatch">Likely Match</p>
+
+                </div>
+            </div>
+            
+            <div className="interests"></div>
           </div>
         </TinderCard>
       ))}

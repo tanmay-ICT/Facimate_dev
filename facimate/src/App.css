@@ -1,0 +1,16 @@
+.explore {
+
+position: absolute;
+width: 91px;
+height: 28px;
+left: 35px;
+top: 32px;
+
+font-family: SF Pro Text;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+}
