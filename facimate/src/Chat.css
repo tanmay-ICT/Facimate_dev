@@ -14,7 +14,7 @@ a {
 }
 
 .chat__details {
-    flex: 1;
+    flex: 10;
 }
 
 .chat__details > p {

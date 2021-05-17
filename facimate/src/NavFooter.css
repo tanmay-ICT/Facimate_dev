@@ -1,0 +1,21 @@
+.nav-footer { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f9f9f9;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+
+
+}
+
+.nav-footer__logo {
+height: 46px;
+object-fit: contain;
+}
+
+.nav-footer__icon {
+
+    padding: 20px;
+}
