@@ -14,12 +14,6 @@
     background: #FFFBF9;
     box-shadow: inset 0px 0px 5px #FFD2B2;
     border-radius: 32px 31px 32px 32px;
-    /* box-shadow: 0px 18px 53px 0px rgba(0,0,0,0.3); */
-    /* position: absolute; */
-    /* left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 59.47%; */
 
     }
 
@@ -64,17 +58,14 @@ color: #000000;
 
 .details_h2 {
 
-    padding-bottom: 13px;
     
 }
 .details_h3 {
 
-    padding-bottom: 13px;
     font-weight: lighter;
 }
 .details_h4 {
 
-    padding-bottom: 13px;
     font-weight: lighter;
 }
 

@@ -4,9 +4,10 @@ import { useAuth } from "./contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
 import NavFooter from "./NavFooter";
 import "./Explore.css";
+import "./Profile.css";
 import LogoHead from "./Logo";
 
-export default function Explore() {
+export default function Profile() {
     const [error, setError] = useState("")
     const { currentUser, logout } = useAuth()
     const history = useHistory()
@@ -24,6 +25,7 @@ export default function Explore() {
   
     return (
       <>
+            <div className="menu"> 
             <h2 className="text-center">Profile</h2>
             {error && <Alert variant="danger">{error}</Alert>}
             <strong>Email:</strong> {currentUser.email}
@@ -33,7 +35,7 @@ export default function Explore() {
             <Button variant="link" onClick={handleLogout}>
             Log Out
           </Button>
-        <h1 className="explore"> Explore </h1>
+          </div>
         <LogoHead/>
         <NavFooter/>
       </>

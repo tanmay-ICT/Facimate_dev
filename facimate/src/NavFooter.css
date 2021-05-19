@@ -12,10 +12,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #f9f9f9;
-    bottom: 0;
+    border: 0.5px solid rgba(253, 131, 69, 0.45);
+    border-radius: 33.5px;
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: #FFFBF9;
+    box-sizing: border-box;
+    width: 95%;
+    margin-left: 11px;
+    height: 67px;
+    bottom: 23px;
     position: fixed;
-    width: 100%;
+    
 }
 
 .nav-footer__logo {

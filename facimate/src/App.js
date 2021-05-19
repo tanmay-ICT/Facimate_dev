@@ -1,6 +1,6 @@
 import React from "react";
 import NavFooter from "./NavFooter";
-// import Profile from "./Profile";
+import Profile from "./Profile";
 import Explore from "./Explore";
 import Chats from "./Chats";
 import ChatScreen from "./ChatScreen";
@@ -29,12 +29,15 @@ function App() {
             <Route path="/login" component={Login}></Route>
             <Route path="/signup" component={Signup}></Route>
             <Route path="/forgot-password" component={ForgotPassword}></Route>
+            <Route path="/profile" >
+              <NavFooter />
+              <Profile />
+            </Route>
             <Route path="/chat/:person">
-              <NavFooter backButton ="/chat" />
               <ChatScreen />
             </Route>
             <Route path="/chat" >
-              <NavFooter backButton ="/" />
+              <NavFooter />
               <Chats />
             </Route>
           </Switch>
