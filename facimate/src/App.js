@@ -1,5 +1,6 @@
 import React from "react";
 import NavFooter from "./NavFooter";
+// import Profile from "./Profile";
 import Explore from "./Explore";
 import Chats from "./Chats";
 import ChatScreen from "./ChatScreen";
@@ -16,7 +17,6 @@ import "./App.css";
 function App() {
   return (
 
-    
     <div className="App">
       
       <Router>

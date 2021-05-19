@@ -19,16 +19,12 @@ return (
                 <ArrowBackIosIcon className="nav-footer__icon" fontSize="large" />
             </IconButton>
         ) : (
+            <Link to ="/profile">
             <IconButton>
                 <PersonIcon className="nav-footer__icon" fontSize="large" />
             </IconButton>
+            </Link>
         )}
-
-        <Link to ="/">
-        <img className="nav-footer__logo"
-        src="https://icons.iconarchive.com/icons/sonya/swarm/128/Fire-icon.png" 
-        alt="our logo"/>
-        </Link>
 
         <Link to ="/chat">
         <IconButton>

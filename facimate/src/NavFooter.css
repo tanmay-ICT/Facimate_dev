@@ -1,3 +1,13 @@
+.logoHead{
+    position: absolute;
+    height: 28px;
+    left: 46.86%;
+    right: 46.79%;
+    top: 3.35%;
+    bottom: 93.53%;
+
+}
+
 .nav-footer { 
     display: flex;
     justify-content: space-between;
@@ -6,16 +16,49 @@
     bottom: 0;
     position: fixed;
     width: 100%;
-
-
 }
 
 .nav-footer__logo {
-height: 46px;
+height: 34px;
 object-fit: contain;
 }
 
-.nav-footer__icon {
+.iconBtn {
 
     padding: 20px;
+    color: #ec5e6f !important
 }
+.chaticonBtn {
+
+    padding: 20px;
+    color: #ec5e6f !important
+}
+
+   
+
+    /* .icon-bar {
+        width: 100%;
+        background-color: rgb(230, 197, 197);
+        overflow: auto;
+        position: fixed;
+        display: flex;
+        bottom: 0;
+      }
+      
+      .icon-bar a {
+        float: left;
+        width: 20%;
+        text-align: center;
+        padding: 12px 0;
+        transition: all 0.3s ease;
+        color: white;
+        font-size: 36px;
+      }
+      
+      .icon-bar a:hover {
+        background-color: #000;
+      }
+      
+      .active {
+        background-color: #04AA6D;
+      } */

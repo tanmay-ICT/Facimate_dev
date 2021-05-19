@@ -1,11 +1,12 @@
 import React, { useState } from "react"
-import { Card, Button, Alert } from "react-bootstrap"
+import { Button, Alert } from "react-bootstrap"
 import { useAuth } from "./contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
 import FMCards from "./FMCards";
 import NavFooter from "./NavFooter";
 import SwipeButtons from "./SwipeButtons";
 import "./Explore.css";
+import LogoHead from "./Logo";
 
 export default function Explore() {
   const [error, setError] = useState("")
@@ -25,8 +26,6 @@ export default function Explore() {
 
   return (
     <>
-    
-      
           <h2 className="text-center">Profile</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           <strong>Email:</strong> {currentUser.email}
@@ -37,6 +36,7 @@ export default function Explore() {
           Log Out
         </Button>
       <h1 className="explore"> Explore </h1>
+      <LogoHead/>
       <FMCards/>
       <NavFooter/>
       <SwipeButtons/>
