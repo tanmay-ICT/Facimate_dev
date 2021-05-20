@@ -18,11 +18,13 @@
     padding-right: 1em;
     background-color: #FFFBF9;
     box-sizing: border-box;
-    width: 95%;
-    margin-left: 11px;
     height: 67px;
-    bottom: 23px;
+    bottom: 27px;
     position: fixed;
+    width: calc(100% - 36px);
+    margin-left: 18px;
+    margin-right: 18px;
+
     
 }
 
@@ -30,7 +32,9 @@
 height: 34px;
 object-fit: contain;
 }
-
+.nav-footer__icon {
+  color: #FD8345 !important;
+}
 .iconBtn {
 
     padding: 20px;

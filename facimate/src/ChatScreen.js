@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Avatar from "@material-ui/core/Avatar";
 import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 import IconButton from "@material-ui/core/IconButton";
+import AddIcon from '@material-ui/icons/Add';
+import SendIcon from '@material-ui/icons/Send';
 import "./ChatScreen.css";
 import { useHistory } from "react-router-dom";
 
@@ -74,6 +76,7 @@ function ChatScreen() {
         )}
 
         <form className="chatScreen__input">
+        <IconButton className="addMedia"><AddIcon fontSize="large" /></IconButton>
           <input
             value={input}
             onChange={(e) => setInput(e.target.value)}
@@ -81,13 +84,12 @@ function ChatScreen() {
             placeholder="Type a message..."
             type="text"
           />
-          <button
+          <IconButton className="chatScreen__inputButton"
             onClick={handleSend}
             type="submit"
-            className="chatScreen__inputButton"
           >
-            SEND
-          </button>
+           <SendIcon fontSize="medium" />
+          </IconButton>
         </form>
       </div>
     </div>

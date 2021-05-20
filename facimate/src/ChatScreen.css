@@ -7,6 +7,7 @@
 }
 .navBtnHead {
   top: -15px;
+  color: #000000 !important;
 }
 .chatName {
   margin-left: 22px;
@@ -54,27 +55,36 @@
   display: flex;
   padding: 5px;
   position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 50px;
-  background: #fffbf9;
+  width: calc(100% - 140px);
+  margin-left: 65px;
+  height:50px;
+  background: #fffbf9 !important;
   border: 1px solid rgba(253, 131, 69, 0.45);
   box-sizing: border-box;
   border-radius: 33.5px;
   bottom: 23px;
+  
 }
 
 .chatScreen__inputField {
   flex: 1;
   padding: 10px;
   border: none;
-  margin-left: 10px;
+  margin-left: -50px;
+  background: #fffbf9 !important;
+}
+.addMedia {
+  position: fixed;
+  display: flex;
+  left: -69px;
+  color: #FD8345 !important;
 }
 
 .chatScreen__inputButton {
   border: none;
-  margin-right: 20px;
-  background-color: white;
+  background-color: #FD8345 !important;
   font-weight: bolder;
-  color: #fe3d71;
+  color: white !important;
+  width: 39px;
+  margin-left: 80px !important;
 }

@@ -23,6 +23,8 @@ bottom: 91.85%;
     color: #000000;
     }
 
+
+
 .conversations {
 
     position: absolute;
@@ -40,4 +42,6 @@ bottom: 91.85%;
 
 .chats{
 margin-top:329px;
+margin-left : 24px;
+margin-right: 24px;
     }

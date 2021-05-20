@@ -1,5 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import { auth } from "../firebase";
+// import { auth, firstore } from "../firebase";
+// import firebase from "../firebase";
 
 const AuthContext = React.createContext();
 
@@ -13,6 +15,25 @@ export function AuthProvider({ children }) {
 
   function signup(email, password) {
     return auth.createUserWithEmailAndPassword(email, password);
+     // //deconstruct the users details we will need these later
+    // const {age,distance,location,name,url,verified, email, password} = userDetails
+    // return () => {
+		//   //user firebase using the appropriate firebase method
+		// 	firebase.auth().createUserWithEmailAndPassword(email, password)
+    //     .then(() => {
+    //         //Once the user creation has happened successfully, we can add the currentUser into firestore
+    //         //with the appropriate details.
+    //         firebase.firestore().collection('people').doc(firebase.auth().currentUser.uid)
+    //         .set({
+    //             age: age,
+    //             distance: distance,
+    //             location: location,
+		// 	        	name: name,
+		// 		        url: url,
+		// 		        verified: verified 
+    //           })
+    //       })
+    //   }
   }
 
 

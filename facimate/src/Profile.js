@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import { Button, Alert } from "react-bootstrap"
 import { useAuth } from "./contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
-import NavFooter from "./NavFooter";
 import "./Explore.css";
 import "./Profile.css";
 import LogoHead from "./Logo";
@@ -25,6 +24,7 @@ export default function Profile() {
   
     return (
       <>
+            
             <div className="menu"> 
             <h2 className="text-center">Profile</h2>
             {error && <Alert variant="danger">{error}</Alert>}
@@ -37,7 +37,6 @@ export default function Profile() {
           </Button>
           </div>
         <LogoHead/>
-        <NavFooter/>
       </>
     )
   }
