@@ -3,7 +3,7 @@ import FMCards from "./FMCards";
 import NavFooter from "./NavFooter";
 import SwipeButtons from "./SwipeButtons";
 import "./Explore.css";
-import LogoHead from "./Logo";
+import LogoHead from "./LogoHead";
 
 export default function Explore() {
 

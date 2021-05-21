@@ -1,11 +1,18 @@
 .logoHead{
     position: absolute;
     height: 28px;
-    left: 46.86%;
+    left: 46%;
     right: 46.79%;
     top: 3.35%;
     bottom: 93.53%;
 
+}
+
+.logoSide{
+  position: absolute;
+  left: 76%;
+  right: 13.94%;
+  bottom: 93%;
 }
 
 .nav-footer { 
@@ -32,6 +39,13 @@
 height: 34px;
 object-fit: contain;
 }
+
+/* .chatpage__logo {
+  height: 34px;
+  object-fit: contain;
+  right: 20px !important;
+  } */
+
 .nav-footer__icon {
   color: #FD8345 !important;
 }
@@ -45,32 +59,3 @@ object-fit: contain;
     padding: 20px;
     color: #ec5e6f !important
 }
-
-   
-
-    /* .icon-bar {
-        width: 100%;
-        background-color: rgb(230, 197, 197);
-        overflow: auto;
-        position: fixed;
-        display: flex;
-        bottom: 0;
-      }
-      
-      .icon-bar a {
-        float: left;
-        width: 20%;
-        text-align: center;
-        padding: 12px 0;
-        transition: all 0.3s ease;
-        color: white;
-        font-size: 36px;
-      }
-      
-      .icon-bar a:hover {
-        background-color: #000;
-      }
-      
-      .active {
-        background-color: #04AA6D;
-      } */

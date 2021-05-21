@@ -4,7 +4,7 @@ import { useAuth } from "./contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
 import "./Explore.css";
 import "./Profile.css";
-import LogoHead from "./Logo";
+import LogoHead from "./LogoHead";
 
 export default function Profile() {
     const [error, setError] = useState("")

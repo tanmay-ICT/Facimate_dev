@@ -1,26 +1,26 @@
 import React from 'react';
 import Chat from "./Chat";
 import "./Chats.css";
-import LogoHead from './Logo';
+import LogoSide from './LogoSide';
 import Matches from'./Matches';
 
 function Chats() {
     return (
         <div>
-            <LogoHead className ="chatLogo"/>
+            <LogoSide/>
             <h1 className="newMatch"> New Matches </h1>
             <div className = "matches-row">
-            </div>
-                
             
-            {/* <Matches
-            profilePic="http://www.globalo.com/content/uploads/2015/12/darth-vader.jpg"/>
             <Matches
-            profilePic="https://i.ibb.co/dtvptvD/Ellipse-27.png"/>
+            profilePic="http://www.globalo.com/content/uploads/2015/12/darth-vader.jpg"
+            name= "Darth"/>
             <Matches
-            profilePic="https://ibb.co/qC8gC8p"/>
+            profilePic="https://i.ibb.co/dtvptvD/Ellipse-27.png" name= "Samantha"/>
             <Matches
-            profilePic="https://ibb.co/qC8gC8p"/> */}
+            profilePic="https://ibb.co/qC8gC8p" name= "Joey" />
+            <Matches
+            profilePic="https://ibb.co/qC8gC8p" name= "Claire" />
+            </div>
     
 
             <h2 className ="conversations"> Conversations </h2>

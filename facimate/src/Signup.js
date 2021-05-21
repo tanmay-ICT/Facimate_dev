@@ -24,26 +24,25 @@ async function handleSubmit(e){
        setError('')
        setLoading(true)
       await signup(emailRef.current.value,passwordRef.current.value)
-      //  export const signupUser = (userDetails) => {
-      //   //deconstruct the users details we will need these later
-      //   const {age,distance,location,name,url,verified, email, password} = userDetails
-      //   return () => {
-      // await signup(emailRef.current.value,passwordRef.current.value)
-      // .then(() => {
-      //   //Once the user creation has happened successfully, we can add the currentUser into firestore
-      //   //with the appropriate details.
-      //   firebase.firestore().collection('people').doc(firebase.auth().currentUser.uid)
-      //   .set({
-      //       age: age,
-      //       distance: distance,
-      //       location: location,
-      //       name: name,
-      //       url: url,
-      //       verified: verified 
-      //       })
-      //     })
-      //   },
-      // };
+    //   //deconstruct the users details we will need these later
+    // const {age,distance,location,name,url,verified, email, password} = userDetails
+    // return () => {
+    //   //user firebase using the appropriate firebase method
+    // 	firebase.auth().createUserWithEmailAndPassword(email, password)
+    //     .then(() => {
+    //         //Once the user creation has happened successfully, we can add the currentUser into firestore
+    //         //with the appropriate details.
+    //         firebase.firestore().collection('people').doc(firebase.auth().currentUser.uid)
+    //         .set({
+		// 			age: age,
+		// 			distance: distance,
+		// 			location: location,
+    // 	        	name: name,
+    // 		        url: url,
+    // 		        verified: verified
+    //           })
+    //       })
+    //   }
       history.push("/")
      } catch {
        setError('Failed to create an account')

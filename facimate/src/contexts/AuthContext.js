@@ -1,7 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
 import { auth } from "../firebase";
-// import { auth, firstore } from "../firebase";
-// import firebase from "../firebase";
 
 const AuthContext = React.createContext();
 
@@ -11,61 +9,59 @@ export function useAuth() {
 
 export function AuthProvider({ children }) {
   const [currentUser, setCurrentUser] = useState();
-  const [loading,setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
-  function signup(email, password) {
+  function signup (email, password) {
     return auth.createUserWithEmailAndPassword(email, password);
-     // //deconstruct the users details we will need these later
+    // //deconstruct the users details we will need these later
     // const {age,distance,location,name,url,verified, email, password} = userDetails
     // return () => {
-		//   //user firebase using the appropriate firebase method
-		// 	firebase.auth().createUserWithEmailAndPassword(email, password)
+    //   //user firebase using the appropriate firebase method
+    // 	firebase.auth().createUserWithEmailAndPassword(email, password)
     //     .then(() => {
     //         //Once the user creation has happened successfully, we can add the currentUser into firestore
     //         //with the appropriate details.
     //         firebase.firestore().collection('people').doc(firebase.auth().currentUser.uid)
     //         .set({
-    //             age: age,
-    //             distance: distance,
-    //             location: location,
-		// 	        	name: name,
-		// 		        url: url,
-		// 		        verified: verified 
+		// 			age: age,
+		// 			distance: distance,
+		// 			location: location,
+    // 	        	name: name,
+    // 		        url: url,
+    // 		        verified: verified
     //           })
     //       })
     //   }
   }
 
-
-  function login(email,password){
-    return auth.signInWithEmailAndPassword(email,password);
+  function login(email, password) {
+    return auth.signInWithEmailAndPassword(email, password);
   }
 
-  function logout(){
-    return auth.signOut()
+  function logout() {
+    return auth.signOut();
   }
 
   function resetPassword(email) {
-    return auth.sendPasswordResetEmail(email)
+    return auth.sendPasswordResetEmail(email);
   }
 
   function updateEmail(email) {
-    return currentUser.updateEmail(email)
+    return currentUser.updateEmail(email);
   }
 
   function updatePassword(password) {
-    return currentUser.updatePassword(password)
+    return currentUser.updatePassword(password);
   }
 
-
   useEffect(() => {
-    const unsubscribe = auth.onAuthStateChanged(user => {
-      setCurrentUser(user)
-      setLoading(false)
-    })
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      setCurrentUser(user);
+      setLoading(false);
+    });
 
-    return unsubscribe
-  }, [])
+    return unsubscribe;
+  }, []);
 
   const value = {
     currentUser,
@@ -74,11 +70,11 @@ export function AuthProvider({ children }) {
     logout,
     resetPassword,
     updateEmail,
-    updatePassword
+    updatePassword,
   };
   return (
     <AuthContext.Provider value={value}>
       {!loading && children}
     </AuthContext.Provider>
-  )
+  );
 }
