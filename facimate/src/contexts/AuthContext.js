@@ -11,8 +11,25 @@ export function AuthProvider({ children }) {
   const [currentUser, setCurrentUser] = useState();
   const [loading, setLoading] = useState(true);
 
-  function signup (email, password) {
+  function signup(email, password) {
     return auth.createUserWithEmailAndPassword(email, password);
+    // exports.createUser = functions.auth.user().onCreate((user) => {
+    //   const { uid } = user;
+    //   const functions = require("firebase-functions");
+    //   const peopleCollection = database.collection("people");
+    
+    //   peopleCollection.doc(uid).set({
+    //     // age: age,
+    //     // distance: distance,
+    //     // location: location,
+    //     // name: name,
+    //     // url: url,
+    //     // verified: verified
+    //     email:email,
+    //     password:password
+    //   });
+    // });
+    
     // //deconstruct the users details we will need these later
     // const {age,distance,location,name,url,verified, email, password} = userDetails
     // return () => {
@@ -23,9 +40,9 @@ export function AuthProvider({ children }) {
     //         //with the appropriate details.
     //         firebase.firestore().collection('people').doc(firebase.auth().currentUser.uid)
     //         .set({
-		// 			age: age,
-		// 			distance: distance,
-		// 			location: location,
+    // 			age: age,
+    // 			distance: distance,
+    // 			location: location,
     // 	        	name: name,
     // 		        url: url,
     // 		        verified: verified
