@@ -1,0 +1,61 @@
+.logoHead{
+    position: absolute;
+    height: 28px;
+    left: 46%;
+    right: 46.79%;
+    top: 3.35%;
+    bottom: 93.53%;
+
+}
+
+.logoSide{
+  position: absolute;
+  left: 76%;
+  right: 13.94%;
+  bottom: 93%;
+}
+
+.nav-footer { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 0.5px solid rgba(253, 131, 69, 0.45);
+    border-radius: 33.5px;
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: #FFFBF9;
+    box-sizing: border-box;
+    height: 67px;
+    bottom: 27px;
+    position: fixed;
+    width: calc(100% - 36px);
+    margin-left: 18px;
+    margin-right: 18px;
+
+    
+}
+
+.nav-footer__logo {
+height: 34px;
+object-fit: contain;
+}
+
+/* .chatpage__logo {
+  height: 34px;
+  object-fit: contain;
+  right: 20px !important;
+  } */
+
+.nav-footer__icon {
+  color: #FD8345 !important;
+}
+.iconBtn {
+
+    padding: 20px;
+    color: #ec5e6f !important
+}
+.chaticonBtn {
+
+    padding: 20px;
+    color: #ec5e6f !important
+}

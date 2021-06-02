@@ -1,55 +1,90 @@
+.NavHeader {
+  position: fixed;
+  display: flex;
+  padding: 5px;
+  left: 23px;
+  top: 53px;
+}
+.navBtnHead {
+  top: -15px;
+  color: #000000 !important;
+}
+.chatName {
+  margin-left: 22px;
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+}
+
+.chatScreen__content {
+  margin-top: 10vh;
+}
+
 .chatScreen__message {
-
-    display: flex;
-    align-items: center;
-    padding: 20px;
-
+  display: flex;
+  align-items: center;
+  padding: 20px;
 }
 
 .chatScreen__text {
-
-    margin-left: 10px;
-    background-color: lightgray;
-    padding: 15px;
-    border-radius: 20px;
+  margin-left: 10px;
+  background-color: #006dc1;
+  color: white;
+  padding: 15px;
+  border-radius: 20px;
 }
 
 .chatScreen__textUser {
-
-    margin-left: auto;
-    background-color: #29b3cd;
-    color: white;
-    padding: 15px;
-    border-radius: 20px;
+  margin-left: auto;
+  background-color: #fe8b51;
+  color: white;
+  padding: 15px;
+  border-radius: 20px;
 }
 
 .chatScreen__timestamp {
-
-    text-align: center;
-    padding: 20px;
-    color: gray;
-
+  text-align: center;
+  padding: 20px;
+  color: gray;
 }
 
 .chatScreen__input {
-    display: flex;
-    padding: 5px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    border-top: 1px solid lightgray;
+  display: flex;
+  padding: 5px;
+  position: fixed;
+  width: calc(100% - 140px);
+  margin-left: 65px;
+  height:50px;
+  background: #fffbf9 !important;
+  border: 1px solid rgba(253, 131, 69, 0.45);
+  box-sizing: border-box;
+  border-radius: 33.5px;
+  bottom: 23px;
+  
 }
 
 .chatScreen__inputField {
-    flex: 1;
-    padding: 10px;
-    border: none;
+  flex: 1;
+  padding: 10px;
+  border: none;
+  margin-left: -50px;
+  background: #fffbf9 !important;
+}
+.addMedia {
+  position: fixed;
+  display: flex;
+  left: -69px;
+  color: #FD8345 !important;
 }
 
 .chatScreen__inputButton {
-    border: none;
-    margin-right: 20px;
-    background-color: white;
-    font-weight: bolder;
-    color: #fe3d71;
+  border: none;
+  background-color: #FD8345 !important;
+  font-weight: bolder;
+  color: white !important;
+  width: 39px;
+  margin-left: 80px !important;
 }
