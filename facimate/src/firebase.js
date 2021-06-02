@@ -46,8 +46,22 @@ export const createUserDocument = async (user, additionalData) => {
     const snapshot = await userRef.get();
 
     if (!snapshot.exists) {
-        const { email } = user;
-        const { displayName, age, gender, location, profilePicture, aboutMe, onelineTagline } = additionalData;
+        const {email} = user;
+        const {
+            displayName,
+            age,
+            gender,
+            location,
+            profilePicture,
+            hobby1,
+            hobby2,
+            hobby3,
+            proInt1,
+            proInt2,
+            proInt3,
+            aboutMe,
+            onelineTagline
+        } = additionalData;
 
         try {
             await userRef.set({
@@ -56,6 +70,12 @@ export const createUserDocument = async (user, additionalData) => {
                 gender,
                 location,
                 profilePicture,
+                hobby1,
+                hobby2,
+                hobby3,
+                proInt1,
+                proInt2,
+                proInt3,
                 aboutMe,
                 onelineTagline,
                 email,
@@ -67,8 +87,6 @@ export const createUserDocument = async (user, additionalData) => {
     }
 };
 
+
 export {auth, peopleCollection}
 export default database
-
-
-

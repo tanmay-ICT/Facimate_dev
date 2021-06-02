@@ -1,23 +1,22 @@
-import React, { Component } from 'react'
-import { auth } from './firebase';
+import React, {Component} from 'react'
+import {auth, createUserDocument} from './firebase';
 import {Form, Button, Card} from "react-bootstrap"
 
 class Login extends Component {
-    state = { email: '', password: '' };
+    state = {email: '', password: ''};
 
     handleChange = (e) => {
-        const { name, value } = e.target;
+        const {name, value} = e.target;
 
-        this.setState({ [name]: value });
+        this.setState({[name]: value});
     };
 
     handleSubmit = async (e) => {
         e.preventDefault();
-        const { email, password } = this.state;
+        const {email, password} = this.state;
         if (email && password) {
             try {
                 await auth.signInWithEmailAndPassword(email, password);
-                
             } catch (error) {
                 console.log('error logging in', error);
             }
@@ -27,7 +26,7 @@ class Login extends Component {
     };
 
     render() {
-        const { email, password } = this.state;
+        const {email, password} = this.state;
         return (
             <div>
                 <form className="signup-login" onSubmit={this.handleSubmit}>

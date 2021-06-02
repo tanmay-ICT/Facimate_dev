@@ -1,13 +1,29 @@
 import React, {Component} from 'react'
 import "firebase/auth";
-import {Form, Button, Card, Col, Dropdown} from "react-bootstrap"
+import {Form, Button, Card, Col, Dropdown, Switch} from "react-bootstrap"
 // import { Link } from "react-router-dom"
 import "firebase/firestore";
 import {auth, createUserDocument} from './firebase';
 
 
 class Signup extends Component {
-    state = {email: '', password: '', displayName: '', age: '', gender: '', location: '', profilePicture: '', aboutMe: '', onelineTagline: ''};
+    state = {
+        email: '',
+        password: '',
+        displayName: '',
+        age: '',
+        gender: '',
+        location: '',
+        profilePicture: '',
+        hobby1: '',
+        hobby2: '',
+        hobby3: '',
+        proInt1: '',
+        proInt2: '',
+        proInt3: '',
+        aboutMe: '',
+        onelineTagline: ''
+    };
 
     handleChange = (e) => {
         const {name, value} = e.target;
@@ -17,14 +33,44 @@ class Signup extends Component {
 
     handleSubmit = async (e) => {
         e.preventDefault();
-        const {email, password, displayName, age, gender, location, profilePicture, aboutMe, onelineTagline} = this.state;
+        const {
+            email,
+            password,
+            displayName,
+            age,
+            gender,
+            location,
+            profilePicture,
+            hobby1,
+            hobby2,
+            hobby3,
+            proInt1,
+            proInt2,
+            proInt3,
+            aboutMe,
+            onelineTagline
+        } = this.state;
         try {
             const {user} = await auth.createUserWithEmailAndPassword(
                 email,
                 password
             );
             console.log(user);
-            await createUserDocument(user, {displayName, age, gender, location, profilePicture, aboutMe, onelineTagline});
+            await createUserDocument(user, {
+                displayName,
+                age,
+                gender,
+                location,
+                profilePicture,
+                hobby1,
+                hobby2,
+                hobby3,
+                proInt1,
+                proInt2,
+                proInt3,
+                aboutMe,
+                onelineTagline
+            });
         } catch (error) {
             console.log('error', error);
         }
@@ -37,13 +83,35 @@ class Signup extends Component {
             gender: '',
             location: '',
             profilePicture: '',
-            aboutMe:'',
-            onelineTagline:''
+            hobby1,
+            hobby2,
+            hobby3,
+            proInt1,
+            proInt2,
+            proInt3,
+            aboutMe: '',
+            onelineTagline: ''
         });
     };
 
     render() {
-        const {email, password, displayName, age, gender, location, profilePicture, aboutMe, onelineTagline} = this.state;
+        const {
+            email,
+            password,
+            displayName,
+            age,
+            gender,
+            location,
+            profilePicture,
+            hobby1,
+            hobby2,
+            hobby3,
+            proInt1,
+            proInt2,
+            proInt3,
+            aboutMe,
+            onelineTagline
+        } = this.state;
         return (
 
             <div>
@@ -118,49 +186,24 @@ class Signup extends Component {
 
                             {/* Gender Input */}
 
-                            <Form.Group id="gender">
+                            <Form.Group as={Col} id="gender" controlId="formGridState">
                                 <Form.Label>Gender</Form.Label>
-                                {/* <Col sm={10}>
-                                    <Form.Check
-                                        type="radio"
-                                        label="Female"
-                                        name="formHorizontalRadios"
-                                        id="formHorizontalRadios1"
-                                        value={gender}
-                                        defaultChecked={this.state.selectedOption === {gender}}
-                                        onChange={this.onValueChange}
-                                    />
-                                    <Form.Check
-                                        type="radio"
-                                        label="Male"
-                                        name="formHorizontalRadios"
-                                        id="formHorizontalRadios2"
-                                        value={gender}
-                                        defaultChecked={this.state.selectedOption === {gender}}
-                                        onChange={this.onValueChange}
-                                    />
-                                </Col> */}
-
-                                <Dropdown>
-                                    <Dropdown.Toggle 
-                                    variant="success" 
-                                    id="dropdown-basic"
-                                    type="dropdown"
-                                    label="Male"
+                                <Form.Control
+                                    as="select"
+                                    defaultValue="Choose..."
+                                    type="gender"
                                     name="gender"
                                     value={gender}
                                     onChange={this.handleChange}
-                                    >
-                                        Dropdown Button
-                                    </Dropdown.Toggle>
-
-                                    <Dropdown.Menu>
-                                        <Dropdown.Item eventKey="Male">Male</Dropdown.Item>
-                                        <Dropdown.Item eventKey="Female">Female</Dropdown.Item>
-                                        <Dropdown.Item eventKey="I prefer not to say">I prefer not to say</Dropdown.Item>
-                                    </Dropdown.Menu>
-                                    </Dropdown>
-                                    
+                                >
+                                    <option>Choose...</option>
+                                    <option>Female</option>
+                                    <option>Male</option>
+                                    <option>Non - binary</option>
+                                    <option>Transgender</option>
+                                    <option>Intersex</option>
+                                    <option>I prefer not to say</option>
+                                </Form.Control>
                                 <Form.Text className="text-muted">
                                     Please select your gender.
                                 </Form.Text>
@@ -200,8 +243,172 @@ class Signup extends Component {
 
                             {/* Hobbies Input */}
 
+                            <Form.Group as={Col} id="hobby1 hobby2 hobby3" controlId="formGridState">
+                                <Form.Label>Choose your hobbies</Form.Label>
+                                <Form.Control
+                                    as="select"
+                                    defaultValue="Choose..."
+                                    type="hobby1"
+                                    name="hobby1"
+                                    value={hobby1}
+                                    onChange={this.handleChange}
+                                    style={{marginBottom: "1em"}}
+                                >
+                                    <option>Choose...</option>
+                                    <option>Reading</option>
+                                    <option>Football</option>
+                                    <option>Gardening</option>
+                                    <option>Hiking</option>
+                                    <option>Photography</option>
+                                    <option>Rock Climbing</option>
+                                    <option>Video Games</option>
+                                    <option>Running</option>
+                                    <option>Cooking</option>
+                                    <option>Horse Riding</option>
+                                    <option>Baking</option>
+                                    <option>Travelling</option>
+                                    <option>Volunteering</option>
+                                </Form.Control>
+
+                                <Form.Control
+                                    as="select"
+                                    defaultValue="Choose..."
+                                    type="hobby2"
+                                    name="hobby2"
+                                    value={hobby2}
+                                    onChange={this.handleChange}
+                                    style={{marginBottom: "1em"}}
+                                >
+                                    <option>Choose...</option>
+                                    <option>Reading</option>
+                                    <option>Football</option>
+                                    <option>Gardening</option>
+                                    <option>Hiking</option>
+                                    <option>Photography</option>
+                                    <option>Rock Climbing</option>
+                                    <option>Video Games</option>
+                                    <option>Running</option>
+                                    <option>Cooking</option>
+                                    <option>Horse Riding</option>
+                                    <option>Baking</option>
+                                    <option>Travelling</option>
+                                    <option>Volunteering</option>
+                                </Form.Control>
+
+                                <Form.Control
+                                    as="select"
+                                    defaultValue="Choose..."
+                                    type="hobby3"
+                                    name="hobby3"
+                                    value={hobby3}
+                                    onChange={this.handleChange}
+                                    style={{marginBottom: "1em"}}
+                                >
+                                    <option>Choose...</option>
+                                    <option>Reading</option>
+                                    <option>Football</option>
+                                    <option>Gardening</option>
+                                    <option>Hiking</option>
+                                    <option>Photography</option>
+                                    <option>Rock Climbing</option>
+                                    <option>Video Games</option>
+                                    <option>Running</option>
+                                    <option>Cooking</option>
+                                    <option>Horse Riding</option>
+                                    <option>Baking</option>
+                                    <option>Travelling</option>
+                                    <option>Volunteering</option>
+                                </Form.Control>
+
+                                <Form.Text className="text-muted">
+                                    Please select 3 hobbies.
+                                </Form.Text>
+                            </Form.Group>
+
 
                             {/* Professional Interests Input */}
+
+                            <Form.Group as={Col} id="proInt1 proInt2 proInt3" controlId="formGridState">
+                                <Form.Label>Choose your professional interests</Form.Label>
+                                <Form.Control
+                                    as="select"
+                                    defaultValue="Choose..."
+                                    type="proInt1"
+                                    name="proInt1"
+                                    value={proInt1}
+                                    onChange={this.handleChange}
+                                    style={{marginBottom: "1em"}}
+                                >
+                                    <option>Choose...</option>
+                                    <option>UI/UX designing</option>
+                                    <option>Programming</option>
+                                    <option>Photography</option>
+                                    <option>App Development</option>
+                                    <option>Image Processing</option>
+                                    <option>Data Analytics</option>
+                                    <option>Emedded Systems</option>
+                                    <option>Machine Learning</option>
+                                    <option>Game Develpoment</option>
+                                    <option>Horse Riding</option>
+                                    <option>3D Animations</option>
+                                    <option>Videography</option>
+                                    <option>Freelancing</option>
+                                </Form.Control>
+
+                                <Form.Control
+                                    as="select"
+                                    defaultValue="Choose..."
+                                    type="proInt2"
+                                    name="proInt2"
+                                    value={proInt2}
+                                    onChange={this.handleChange}
+                                    style={{marginBottom: "1em"}}
+                                >
+                                    <option>Choose...</option>
+                                    <option>UI/UX designing</option>
+                                    <option>Programming</option>
+                                    <option>Photography</option>
+                                    <option>App Development</option>
+                                    <option>Image Processing</option>
+                                    <option>Data Analytics</option>
+                                    <option>Emedded Systems</option>
+                                    <option>Machine Learning</option>
+                                    <option>Game Develpoment</option>
+                                    <option>Horse Riding</option>
+                                    <option>3D Animations</option>
+                                    <option>Videography</option>
+                                    <option>Freelancing</option>
+                                </Form.Control>
+
+                                <Form.Control
+                                    as="select"
+                                    defaultValue="Choose..."
+                                    type="proInt3"
+                                    name="proInt3"
+                                    value={proInt3}
+                                    onChange={this.handleChange}
+                                    style={{marginBottom: "1em"}}
+                                >
+                                    <option>Choose...</option>
+                                    <option>UI/UX designing</option>
+                                    <option>Programming</option>
+                                    <option>Photography</option>
+                                    <option>App Development</option>
+                                    <option>Image Processing</option>
+                                    <option>Data Analytics</option>
+                                    <option>Emedded Systems</option>
+                                    <option>Machine Learning</option>
+                                    <option>Game Develpoment</option>
+                                    <option>Horse Riding</option>
+                                    <option>3D Animations</option>
+                                    <option>Videography</option>
+                                    <option>Freelancing</option>
+                                </Form.Control>
+
+                                <Form.Text className="text-muted">
+                                    Please select 3 professional interests.
+                                </Form.Text>
+                            </Form.Group>
 
                             {/* About Me Input */}
 
