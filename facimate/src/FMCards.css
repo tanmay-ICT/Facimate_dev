@@ -41,7 +41,7 @@
     bottom: 62.45%;
     border-radius: 30px;
 }
-.details {
+.top_details {
 
 position: absolute;
 left: 60%;
@@ -80,8 +80,26 @@ color: #000000;
     border-radius: 10px;
 
 }
+.bottom_details{
+    position: absolute;
+    left: 20.42%;
+    right: 20.69%;
+    top: 45.21%;
+    bottom: 51.54%;
+    font-family: SF Pro Text;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height */
+    
+    
+    color: #000000;
+}
+.onelineTagline {
+    font-style: italic;
+}
 
-.interests{
+.interests {
 
     /* position: absolute;
     left: 0%;

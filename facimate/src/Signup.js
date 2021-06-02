@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import "firebase/auth";
-import {Form, Button, Card, Col} from "react-bootstrap"
+import {Form, Button, Card, Col, Dropdown} from "react-bootstrap"
 // import { Link } from "react-router-dom"
 import "firebase/firestore";
 import {auth, createUserDocument} from './firebase';
@@ -120,7 +120,7 @@ class Signup extends Component {
 
                             <Form.Group id="gender">
                                 <Form.Label>Gender</Form.Label>
-                                <Col sm={10}>
+                                {/* <Col sm={10}>
                                     <Form.Check
                                         type="radio"
                                         label="Female"
@@ -139,7 +139,28 @@ class Signup extends Component {
                                         defaultChecked={this.state.selectedOption === {gender}}
                                         onChange={this.onValueChange}
                                     />
-                                </Col>
+                                </Col> */}
+
+                                <Dropdown>
+                                    <Dropdown.Toggle 
+                                    variant="success" 
+                                    id="dropdown-basic"
+                                    type="dropdown"
+                                    label="Male"
+                                    name="gender"
+                                    value={gender}
+                                    onChange={this.handleChange}
+                                    >
+                                        Dropdown Button
+                                    </Dropdown.Toggle>
+
+                                    <Dropdown.Menu>
+                                        <Dropdown.Item eventKey="Male">Male</Dropdown.Item>
+                                        <Dropdown.Item eventKey="Female">Female</Dropdown.Item>
+                                        <Dropdown.Item eventKey="I prefer not to say">I prefer not to say</Dropdown.Item>
+                                    </Dropdown.Menu>
+                                    </Dropdown>
+                                    
                                 <Form.Text className="text-muted">
                                     Please select your gender.
                                 </Form.Text>
