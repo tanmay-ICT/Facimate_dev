@@ -97,18 +97,18 @@ color: #000000;
 }
 
 .onelineTagline {
-    position: relative;
     font-style: italic;
     font-weight: 300;
     font-size: 15px;
     line-height: 18px;
     color: #000000;
+
 }
 
 .interests {
 
     position: absolute;
-    top: 64%;
+    top: 61%;
     line-height: normal;
 }
 
@@ -120,10 +120,18 @@ color: #000000;
     border: 1px solid #FFBE9D;
     border-radius: 30px;
     margin-bottom: 13px;
+    margin-left: 5em;
+    display: block;
 }
 
 .interest_text {
     margin-left: 4em;
+    white-space: nowrap;
+    margin-top: 0.7em;
+}
+
+.more_interest{
+    margin-left:10em;
 }
 
 .FMCard__cardContainer{

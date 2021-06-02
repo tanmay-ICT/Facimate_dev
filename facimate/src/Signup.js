@@ -1,10 +1,9 @@
 import React, {Component} from 'react'
 import "firebase/auth";
 import {Form, Button, Card, Col, Dropdown, Switch} from "react-bootstrap"
-// import { Link } from "react-router-dom"
+import { Link, useHistory, Redirect } from "react-router-dom"
 import "firebase/firestore";
 import {auth, createUserDocument} from './firebase';
-
 
 class Signup extends Component {
     state = {
@@ -33,6 +32,7 @@ class Signup extends Component {
 
     handleSubmit = async (e) => {
         e.preventDefault();
+        
         const {
             email,
             password,
@@ -70,7 +70,7 @@ class Signup extends Component {
                 proInt3,
                 aboutMe,
                 onelineTagline
-            });
+            })
         } catch (error) {
             console.log('error', error);
         }
@@ -459,4 +459,4 @@ class Signup extends Component {
     }
 }
 
-export default Signup;
+export default Signup

@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
-import {auth, createUserDocument} from './firebase';
+import { auth } from './firebase';
 import {Form, Button, Card} from "react-bootstrap"
+import { Link, useHistory } from "react-router-dom"
 
 class Login extends Component {
     state = {email: '', password: ''};
@@ -21,8 +22,6 @@ class Login extends Component {
                 console.log('error logging in', error);
             }
         }
-
-        // this.setState({ email: '', password: '' });
     };
 
     render() {
