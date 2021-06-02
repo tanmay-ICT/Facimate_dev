@@ -3,7 +3,7 @@
     src: local('-apple-system, BlinkMacSystemFont, sans-serif'), url(./fonts/SF-Pro-Display-Regular.otf) format('opentype');
     /* other formats include: 'woff2', 'truetype, 'opentype',
                               'embedded-opentype', and 'svg' */
-  }
+}
   
 .unique_card {
     position: relative;
@@ -15,7 +15,7 @@
     box-shadow: inset 0px 0px 5px #FFD2B2;
     border-radius: 32px 31px 32px 32px;
 
-    }
+}
 
 .pro_info {
 
@@ -78,48 +78,59 @@ color: #000000;
     background: #007CDC;
     padding: 6.5px;
     border-radius: 10px;
-
 }
-.bottom_details{
+
+.bottom_details {
     position: absolute;
-    left: 20.42%;
-    right: 20.69%;
-    top: 45.21%;
-    bottom: 51.54%;
-    font-family: SF Pro Text;
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 18px;
-    /* identical to box height */
+    left: 10%;
+    right:15%;
+    top: 45.72%;
+    bottom: 44.48%;
     
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
     
     color: #000000;
 }
+
 .onelineTagline {
+    position: relative;
     font-style: italic;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
 }
 
 .interests {
 
-    /* position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 35.09%;
-    bottom: 0%; */
-    
-    
-
+    position: absolute;
+    top: 64%;
+    line-height: normal;
 }
 
+.interest_img {
+
+    width:44.64px;
+    height:44.64px;
+    background: #F8F8F8;
+    border: 1px solid #FFBE9D;
+    border-radius: 30px;
+    margin-bottom: 13px;
+}
+
+.interest_text {
+    margin-left: 4em;
+}
 
 .FMCard__cardContainer{
-
     display: flex;
     justify-content: center;
-
 }
 
 .swipe{
-
     position: absolute;
 }

@@ -47,12 +47,16 @@ function FMCards() {
                                            "likelyMatch">Likely Match</p>
                                 </div>
                                 <div className="bottom_details">
-                                    <h4 className="details_h4 onelineTagline">{person.onelineTagline}</h4>
-                                    <h2 className="details_h2">{person.displayName}'s interests</h2>
+                                    <p className="onelineTagline text-center">❝ {person.onelineTagline} ❞</p>
+                                    <h2>{person.displayName}'s interests</h2>
+                                </div>
+                                <div className="interests">
+                                <div className="interest_img"><p className="interest_text">{person.hobby1}</p></div>
+                                <div className="interest_img"><p className="interest_text">{person.hobby2}</p></div>
+                                <div className="interest_img"><p className="interest_text">{person.hobby3}</p></div>
+                                <p className="more_interest">and more interests</p>
                                 </div>
                             </div>
-
-                            <div className="interests"></div>
                         </div>
                     </TinderCard>
                 ))}

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { auth, createUserDocument } from './firebase';
+import { auth } from './firebase';
 import {Form, Button, Card} from "react-bootstrap"
 
 class Login extends Component {
@@ -17,6 +17,7 @@ class Login extends Component {
         if (email && password) {
             try {
                 await auth.signInWithEmailAndPassword(email, password);
+                
             } catch (error) {
                 console.log('error logging in', error);
             }

@@ -67,7 +67,6 @@ export const createUserDocument = async (user, additionalData) => {
     }
 };
 
-
 export {auth, peopleCollection}
 export default database
 
