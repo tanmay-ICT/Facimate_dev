@@ -18,6 +18,7 @@ class Login extends Component {
         if (email && password) {
             try {
                 await auth.signInWithEmailAndPassword(email, password);
+                window.location.href = "/";
             } catch (error) {
                 console.log('error logging in', error);
             }
@@ -61,6 +62,9 @@ class Login extends Component {
                     <Button variant="primary" className="w-100" type="submit">
                         Login
                     </Button>
+                    <div className="w-100 text-center mt-2">
+                   New User? <Link to="/signup">Sign Up</Link>
+                </div>
                 </form>
             </div>
         );
