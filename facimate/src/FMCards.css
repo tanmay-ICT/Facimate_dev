@@ -115,9 +115,9 @@ color: #000000;
 .interest_img {
 
     width:44.64px;
-    height:44.64px;
-    background: #F8F8F8;
-    border: 1px solid #FFBE9D;
+    height:33.64px;
+    /* background: #F8F8F8;
+    border: 1px solid #FFBE9D; */
     border-radius: 30px;
     margin-bottom: 13px;
     margin-left: 5em;
@@ -131,7 +131,7 @@ color: #000000;
 }
 
 .more_interest{
-    margin-left:10em;
+    margin-left:7em;
 }
 
 .FMCard__cardContainer{

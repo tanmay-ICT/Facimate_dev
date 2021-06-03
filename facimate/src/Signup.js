@@ -255,19 +255,19 @@ class Signup extends Component {
                                     style={{marginBottom: "1em"}}
                                 >
                                     <option>Choose...</option>
-                                    <option>Reading</option>
-                                    <option>Football</option>
-                                    <option>Gardening</option>
-                                    <option>Hiking</option>
-                                    <option>Photography</option>
-                                    <option>Rock Climbing</option>
-                                    <option>Video Games</option>
-                                    <option>Running</option>
-                                    <option>Cooking</option>
-                                    <option>Horse Riding</option>
-                                    <option>Baking</option>
-                                    <option>Travelling</option>
-                                    <option>Volunteering</option>
+                                    <option>📖 Reading</option>
+                                    <option>⚽️ Football</option>
+                                    <option>🌱 Gardening</option>
+                                    <option>🥾 Hiking</option>
+                                    <option>📸 Photography</option>
+                                    <option>🧗‍♀️ Rock Climbing</option>
+                                    <option>🎮 Video Games</option>
+                                    <option>🏃‍♂️ Running</option>
+                                    <option>🍳 Cooking</option>
+                                    <option>🏇 Horse Riding</option>
+                                    <option>🥖 Baking</option>
+                                    <option>🧳 Travelling</option>
+                                    <option>🤝 Volunteering</option>
                                 </Form.Control>
 
                                 <Form.Control
@@ -279,20 +279,20 @@ class Signup extends Component {
                                     onChange={this.handleChange}
                                     style={{marginBottom: "1em"}}
                                 >
-                                    <option>Choose...</option>
-                                    <option>Reading</option>
-                                    <option>Football</option>
-                                    <option>Gardening</option>
-                                    <option>Hiking</option>
-                                    <option>Photography</option>
-                                    <option>Rock Climbing</option>
-                                    <option>Video Games</option>
-                                    <option>Running</option>
-                                    <option>Cooking</option>
-                                    <option>Horse Riding</option>
-                                    <option>Baking</option>
-                                    <option>Travelling</option>
-                                    <option>Volunteering</option>
+                                     <option>Choose...</option>
+                                    <option>📖 Reading</option>
+                                    <option>⚽️ Football</option>
+                                    <option>🌱 Gardening</option>
+                                    <option>🥾 Hiking</option>
+                                    <option>📸 Photography</option>
+                                    <option>🧗‍♀️ Rock Climbing</option>
+                                    <option>🎮 Video Games</option>
+                                    <option>🏃‍♂️ Running</option>
+                                    <option>🍳 Cooking</option>
+                                    <option>🏇 Horse Riding</option>
+                                    <option>🥖 Baking</option>
+                                    <option>🧳 Travelling</option>
+                                    <option>🤝 Volunteering</option>
                                 </Form.Control>
 
                                 <Form.Control
@@ -304,20 +304,20 @@ class Signup extends Component {
                                     onChange={this.handleChange}
                                     style={{marginBottom: "1em"}}
                                 >
-                                    <option>Choose...</option>
-                                    <option>Reading</option>
-                                    <option>Football</option>
-                                    <option>Gardening</option>
-                                    <option>Hiking</option>
-                                    <option>Photography</option>
-                                    <option>Rock Climbing</option>
-                                    <option>Video Games</option>
-                                    <option>Running</option>
-                                    <option>Cooking</option>
-                                    <option>Horse Riding</option>
-                                    <option>Baking</option>
-                                    <option>Travelling</option>
-                                    <option>Volunteering</option>
+                                     <option>Choose...</option>
+                                    <option>📖  Reading</option>
+                                    <option>⚽️  Football</option>
+                                    <option>🌱  Gardening</option>
+                                    <option>🥾  Hiking</option>
+                                    <option>📸  Photography</option>
+                                    <option>🧗‍♀️  Rock Climbing</option>
+                                    <option>🎮  Video Games</option>
+                                    <option>🏃‍♂️  Running</option>
+                                    <option>🍳  Cooking</option>
+                                    <option>🏇  Horse Riding</option>
+                                    <option>🥖  Baking</option>
+                                    <option>🧳  Travelling</option>
+                                    <option>🤝  Volunteering</option>
                                 </Form.Control>
 
                                 <Form.Text className="text-muted">
@@ -340,19 +340,19 @@ class Signup extends Component {
                                     style={{marginBottom: "1em"}}
                                 >
                                     <option>Choose...</option>
-                                    <option>UI/UX designing</option>
-                                    <option>Programming</option>
-                                    <option>Photography</option>
-                                    <option>App Development</option>
-                                    <option>Image Processing</option>
-                                    <option>Data Analytics</option>
-                                    <option>Emedded Systems</option>
-                                    <option>Machine Learning</option>
-                                    <option>Game Develpoment</option>
-                                    <option>Horse Riding</option>
-                                    <option>3D Animations</option>
-                                    <option>Videography</option>
-                                    <option>Freelancing</option>
+                                    <option>🎨  UI/UX designing</option>
+                                    <option>💻  Programming</option>
+                                    <option>📷  Photography</option>
+                                    <option>📱  App Development</option>
+                                    <option>🌀  Image Processing</option>
+                                    <option>📊  Data Analytics</option>
+                                    <option>🎛  Emedded Systems</option>
+                                    <option>🧬  Machine Learning</option>
+                                    <option>👾  Game Develpoment</option>
+                                    <option>📰  Journalism</option>
+                                    <option>💥  3D Animations</option>
+                                    <option>🎥  Videography</option>
+                                    <option>👩‍💻  Freelancing</option>
                                 </Form.Control>
 
                                 <Form.Control
@@ -365,19 +365,19 @@ class Signup extends Component {
                                     style={{marginBottom: "1em"}}
                                 >
                                     <option>Choose...</option>
-                                    <option>UI/UX designing</option>
-                                    <option>Programming</option>
-                                    <option>Photography</option>
-                                    <option>App Development</option>
-                                    <option>Image Processing</option>
-                                    <option>Data Analytics</option>
-                                    <option>Emedded Systems</option>
-                                    <option>Machine Learning</option>
-                                    <option>Game Develpoment</option>
-                                    <option>Horse Riding</option>
-                                    <option>3D Animations</option>
-                                    <option>Videography</option>
-                                    <option>Freelancing</option>
+                                    <option>🎨  UI/UX designing</option>
+                                    <option>💻  Programming</option>
+                                    <option>📷  Photography</option>
+                                    <option>📱  App Development</option>
+                                    <option>🌀  Image Processing</option>
+                                    <option>📊  Data Analytics</option>
+                                    <option>🎛  Emedded Systems</option>
+                                    <option>🧬  Machine Learning</option>
+                                    <option>👾  Game Develpoment</option>
+                                    <option>📰  Journalism</option>
+                                    <option>💥  3D Animations</option>
+                                    <option>🎥  Videography</option>
+                                    <option>👩‍💻  Freelancing</option>
                                 </Form.Control>
 
                                 <Form.Control
@@ -390,19 +390,19 @@ class Signup extends Component {
                                     style={{marginBottom: "1em"}}
                                 >
                                     <option>Choose...</option>
-                                    <option>UI/UX designing</option>
-                                    <option>Programming</option>
-                                    <option>Photography</option>
-                                    <option>App Development</option>
-                                    <option>Image Processing</option>
-                                    <option>Data Analytics</option>
-                                    <option>Emedded Systems</option>
-                                    <option>Machine Learning</option>
-                                    <option>Game Develpoment</option>
-                                    <option>Horse Riding</option>
-                                    <option>3D Animations</option>
-                                    <option>Videography</option>
-                                    <option>Freelancing</option>
+                                    <option>🎨  UI/UX designing</option>
+                                    <option>💻  Programming</option>
+                                    <option>📷  Photography</option>
+                                    <option>📱  App Development</option>
+                                    <option>🌀  Image Processing</option>
+                                    <option>📊  Data Analytics</option>
+                                    <option>🎛  Emedded Systems</option>
+                                    <option>🧬  Machine Learning</option>
+                                    <option>👾  Game Develpoment</option>
+                                    <option>📰  Journalism</option>
+                                    <option>💥  3D Animations</option>
+                                    <option>🎥  Videography</option>
+                                    <option>👩‍💻  Freelancing</option>
                                 </Form.Control>
 
                                 <Form.Text className="text-muted">

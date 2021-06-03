@@ -54,7 +54,7 @@ function FMCards() {
                                 <div className="interest_img"><p className="interest_text">{person.hobby1}</p></div>
                                 <div className="interest_img"><p className="interest_text">{person.hobby2}</p></div>
                                 <div className="interest_img"><p className="interest_text">{person.hobby3}</p></div>
-                                <p className="more_interest" >and more interests</p>
+                                <p className="more_interest" >🏸 &nbsp;&nbsp;🏎 &nbsp;&nbsp;🎸&nbsp;&nbsp; and more interests</p>
                                 </div>
                             </div>
                         </div>
