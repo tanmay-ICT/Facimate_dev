@@ -7,7 +7,8 @@ function Chat({ name, message, profilePic, timestamp }) {
     
     return (
     
-        <Link to={`/chat/${name}`}>
+        
+        <Link to={`/chat/${name}`} Link style={{ color: 'inherit', textDecoration: 'inherit'}}>
     
             <div className = "chat">
             <Avatar className="chat__image" src = {profilePic} />

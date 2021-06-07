@@ -1,0 +1,12 @@
+.menu {
+    margin-top: 10vh;
+    border: 0.5px solid rgba(253, 131, 69, 0.45);
+    border-radius: 33.5px;
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: #FFFBF9;
+    box-sizing: border-box;
+    margin-right: 24px;
+    margin-left: 24px;
+    
+}

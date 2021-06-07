@@ -1,0 +1,39 @@
+.matches-row{
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 386px;
+  height: 125px;
+  left: 14px;
+  top: 90px;
+  border-radius: 32px;
+  margin-top: 1rem;
+  }
+
+  .matches{
+    border: solid #000000 2px;
+  }  
+  
+  .match__name{   
+    
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;  
+    margin-top: 13px;
+    text-align: center !important;
+    width: 80px !important;
+    color: #000000;
+    
+  }
+  
+  .match__image {
+    
+  position: absolute;
+  width: 80px !important;
+  height: 80px !important;
+  border-radius: 40px;
+  border: 3px solid #FFA375;
+  }
