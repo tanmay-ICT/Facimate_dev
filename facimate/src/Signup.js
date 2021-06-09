@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import "firebase/auth";
 import {Form, Button, Card, Col, Dropdown, Switch} from "react-bootstrap"
-import { Link, useHistory, Redirect } from "react-router-dom"
+import { Link } from "react-router-dom"
 import "firebase/firestore";
 import {auth, createUserDocument} from './firebase';
 
