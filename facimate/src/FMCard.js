@@ -12,8 +12,14 @@ const FMCard = ({ person }) => {
 
   const onSwipe = (direction) => {
     if (direction === "right") {
+      console.log('currentCardHobbies', currentCardHobbies);
+      console.log('currentUserHobbies', currentUserHobbies);
       // check match
       const isAMatch = checkMatch(currentCardHobbies, currentUserHobbies);
+    
+      
+      // console.log("You swiped right");
+     
     }
   };
 
@@ -40,8 +46,8 @@ const FMCard = ({ person }) => {
   }, []);
 
   useEffect(() => {
-    console.log('currentCardHobbies', currentCardHobbies);
-    console.log('currentUserHobbies', currentUserHobbies);
+    // console.log('currentCardHobbies', currentCardHobbies);
+    // console.log('currentUserHobbies', currentUserHobbies);
 
     const isMatch = currentUserHobbies.some((hobby) =>
       currentCardHobbies.includes(hobby)

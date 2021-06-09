@@ -1,4 +1,4 @@
-import React from 'react';
+ import React from 'react';
 import {Reject, Like} from "./components/matching/Matching";
 import ReplyIcon from "@material-ui/icons/Reply";
 import CloseIcon from "@material-ui/icons/Close";
