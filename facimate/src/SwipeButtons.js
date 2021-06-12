@@ -7,7 +7,7 @@ import TinderCard from 'react-tinder-card';
 
 import "./SwipeButtons.css"
 
-const SwipeButtons = () => {
+const SwipeButtons = ({onRightClick}) => {
 
     return (
         <div className="swipeButtons">
@@ -20,7 +20,7 @@ const SwipeButtons = () => {
                 <HiOutlineX className="icon_left" />
             </IconButton>
 
-            <IconButton  className="swipeButtons__right">
+            <IconButton onClick={onRightClick} className="swipeButtons__right">
                 <HiOutlineHeart className="icon_right" />
             </IconButton>
 

@@ -13,7 +13,6 @@ export default function Explore() {
             <LogoHead/>
             <FMCards/>
             <NavFooter/>
-            <SwipeButtons/>
         </>
     )
 }

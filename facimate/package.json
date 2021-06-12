@@ -17,6 +17,7 @@
     "react-icons": "^4.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3",
+    "react-swipeable": "^6.1.2",
     "swiper": "^6.6.1",
     "web-vitals": "^1.1.1"
   },
