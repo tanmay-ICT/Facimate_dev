@@ -1,6 +1,6 @@
 .swipeButtons {
     position: fixed;
-    bottom: 14.5vh;
+    bottom: 14.7vh;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -13,20 +13,35 @@
 
 .swipeButtons__repeat {
     padding: 3vw !important;
-    color: #f5b748 !important;
+    color: #fd8345 !important;
   }
+  .icon_repeat {
+    font-size: 33px;
+    margin-top: -1.5px;
+ }
   
   .swipeButtons__left {
     padding: 3vw !important;
-    color: #ec5e6f !important;
+    color: #fd8345 !important;
   }
+  .icon_left {
+    font-size: 32px;
+ }
 
   .swipeButtons__right {
     padding: 3vw !important;
-    color: #76e2b3 !important;
+    color: #fd8345 !important;
   }
+   .icon_right {
+    font-size: 32px;
+ }
   
-  .swipeButtons__lightning {
+  .swipeButtons__msg {
     padding: 3vw !important;
-    color: #915dd1 !important;
+    color: #fd8345 !important;
   }
+  .icon_msg {
+    font-size: 32px;
+ }
+
+ 

@@ -54,17 +54,25 @@ color: #000000;
 }
 
 
-.details_h2 {
+.details_name {
 
-    
+    font-size: xx-large;
+    margin-bottom: 13px;
 }
-.details_h3 {
+.details_distance {
 
-    font-weight: lighter;
+    font-size: larger;
+    margin-bottom: 13px;
 }
-.details_h4 {
+.details_age {
 
-    font-weight: lighter;
+    font-size: larger;
+    margin-bottom: 13px;
+}
+.details_location {
+
+    font-size: larger;
+    margin-bottom: 13px;
 }
 
 .likelyMatch {
@@ -108,28 +116,35 @@ color: #000000;
     position: absolute;
     top: 61%;
     line-height: normal;
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-size: 18px;
 }
 
 .interest_img {
 
-    width:44.64px;
-    height:33.64px;
+    width:39px;
+    height:39px;
     /* background: #F8F8F8;
     border: 1px solid #FFBE9D; */
     border-radius: 30px;
     margin-bottom: 13px;
-    margin-left: 5em;
+    margin-left: 6.5em;
     display: block;
 }
 
 .interest_text {
-    margin-left: 4em;
+    margin-left: 0.5em;
     white-space: nowrap;
-    margin-top: 0.7em;
+    margin-top: 0.285em;
+   
 }
 
 .more_interest{
-    margin-left:7em;
+    margin-left:4.4em;
+    font-family: SF Pro Text;
+    font-style: normal;
+    font-size: 15px;
 }
 
 .FMCard__cardContainer{

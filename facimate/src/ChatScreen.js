@@ -22,22 +22,20 @@ function ChatScreen() {
     const [input, setInput] = useState("");
     const [messages, setMessages] = useState([
         {
-            name: "Darth",
-            image:
-                "http://www.globalo.com/content/uploads/2015/12/darth-vader.jpg%22",
-            message: "Your name is Luke, innit?",
+            name: "Edna",
+            image: "https://images.pexels.com/photos/3765114/pexels-photo-3765114.jpeg",
+            message: "Hey, there. A little bird told me you're into biking.",
         },
         {
-            message: "Yeah, it is :)",
+            message: "Yeah, totally! Absolutely love it",
         },
         {
-            name: "Darth",
-            image:
-                "http://www.globalo.com/content/uploads/2015/12/darth-vader.jpg%22",
-            message: "I can be yo daddy",
+            message: "But usually fun, in groups or with somebody else to experience it with",
         },
         {
-            message: "Bruh 🙄",
+            name: "Edna",
+            image: "https://images.pexels.com/photos/3765114/pexels-photo-3765114.jpeg",
+            message: "I know right! Since I'm new around here, I haven't found anybody I know yet who is really into it.",
         },
     ]);
 
@@ -52,11 +50,11 @@ function ChatScreen() {
         <div>
             <div className="NavHeader">
                 <Return/>
-                <h1 className="chatName"> Darth</h1>
+                <h1 className="chatName"> Edna</h1>
             </div>
             <div className="chatScreen__content">
                 <p className="chatScreen__timestamp">
-                    YOU MATCHED WITH DARTH ON 10/08/20
+                    YOU MATCHED WITH EDNA ON 10/08/20
                 </p>
                 {messages.map((message) =>
                     message.name ? (
@@ -76,22 +74,22 @@ function ChatScreen() {
                     )
                 )}
 
-                <form className="chatScreen__input">
-                    <IconButton className="addMedia"><AddIcon fontSize="large"/></IconButton>
-                    <input
-                        value={input}
-                        onChange={(e) => setInput(e.target.value)}
-                        className="chatScreen__inputField"
-                        placeholder="Type a message..."
-                        type="text"
-                    />
-                    <IconButton className="chatScreen__inputButton"
-                                onClick={handleSend}
-                                type="submit"
-                    >
-                        <SendIcon fontSize="medium"/>
-                    </IconButton>
-                </form>
+                    <form className="chatScreen__input">
+                        <IconButton className="addMedia"><AddIcon fontSize="large"/></IconButton>
+                        <input
+                            value={input}
+                            onChange={(e) => setInput(e.target.value)}
+                            className="chatScreen__inputField"
+                            placeholder="Type a message..."
+                            type="text"
+                        />
+                        <IconButton className="chatScreen__inputButton"
+                                    onClick={handleSend}
+                                    type="submit"
+                        >
+                            <SendIcon fontSize="medium"/>
+                        </IconButton>
+                    </form>
             </div>
         </div>
     );

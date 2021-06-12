@@ -5,6 +5,8 @@ import ChatIcon from '@material-ui/icons/Chat';
 import IconButton from '@material-ui/core/IconButton';
 import ExploreIcon from '@material-ui/icons/Explore';
 import { Link } from "react-router-dom";
+import { IoMdCompass, IoMdPerson } from "react-icons/io";
+import { IoChatbubblesSharp } from "react-icons/io5";
 
 function NavFooter() {
 
@@ -16,19 +18,19 @@ return (
 
         <Link to ="/">
             <IconButton>
-                <ExploreIcon className="nav-footer__icon" fontSize="large" />
+                <IoMdCompass className="nav-footer__icon" fontSize="large" />
             </IconButton>
         </Link> 
 
         <Link to ="/chat">
         <IconButton>
-            <ChatIcon className="nav-footer__icon" fontSize="large" />
+            <IoChatbubblesSharp className="nav-footer__icon" fontSize="large" />
         </IconButton>
         </Link>
 
         <Link to ="/profile">
         <IconButton>
-            <PersonIcon className="nav-footer__icon" fontSize="large" />
+            <IoMdPerson className="nav-footer__icon" fontSize="large" />
         </IconButton>
         </Link>
 

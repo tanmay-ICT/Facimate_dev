@@ -1,29 +1,39 @@
 import React, {useState, useEffect} from "react";
-import TinderCard from "react-tinder-card";
 import database, {auth} from "./firebase";
 import "./FMCards.css";
 import FMCard from "./FMCard";
 
 const FMCards = () => {
     const [people, setPeople] = useState([]);
+    const [currentUserHobbies, setCurrentUserHobbies] = useState([]);
 
 //Piece of code which runs based on a condition
 
     useEffect(() => {
         //this is where the code runs..
 
-        const unsubscribe = database
+        async function fetchPeople() {
+          const snapshot = await database.collection("people").get();     
+          let response = snapshot.docs.map(doc => doc.data());
+          setPeople(response);
+        }
+
+        fetchPeople();
+
+        async function fetchCurrentUser() {
+          const snapshot = await database
             .collection("people")
-            .onSnapshot((snapshot) =>
-                setPeople(snapshot.docs.map((doc) => doc.data()))
-            );
+            .doc(auth.currentUser.uid)
+            .get();
+          const currentUser = snapshot.data();
+            setCurrentUserHobbies([
+              currentUser.hobby1,
+              currentUser.hobby2,
+              currentUser.hobby3,
+            ]);
+        }
 
-        return () => {
-
-            //this is the cleanup...
-            unsubscribe();
-
-        };
+        fetchCurrentUser();
 
         //this will run ONCE when the component loads, and never again.
     }, []);
@@ -31,8 +41,8 @@ const FMCards = () => {
     return (
         <div>
             <div className="FMCard__cardContainer">
-                {people.map((person) => (
-                    <FMCard person={person} />
+                {people.map((person, idx) => (
+                    <FMCard key={idx} person={person} currentUserHobbies={currentUserHobbies}/>
                 ))}
             </div>
         </div>
