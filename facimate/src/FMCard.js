@@ -1,8 +1,9 @@
-import React, { useCallback, useEffect, useState, useMemo } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import TinderCard from "react-tinder-card";
 import SwipeButtons from "./SwipeButtons";
 
 const checkMatch = (arr1, arr2) => arr1.some((el) => arr2.includes(el));
+// const alreadyRemoved = []
 
 const FMCard = ({ person, currentUserHobbies }) => {
 
@@ -16,15 +17,46 @@ const FMCard = ({ person, currentUserHobbies }) => {
   console.log("currentUserHobbies after update", _currentUserHobbies);
 
   // const onSwipe = (direction) => {
-  //   console.log("currentUserHobbies in swipe fnc", _currentUserHobbies);
+  //   // console.log("currentUserHobbies in swipe fnc", _currentUserHobbies);
 
   //   if (direction === 'right') {
-  //     console.log("currentUserHobbies on swipe", _currentUserHobbies);
-  //     // check match
-  //     const isAMatch = checkMatch(currentCardHobbies, _currentUserHobbies);
-  //     console.log(isAMatch);
+  //     // console.log("currentUserHobbies on swipe", _currentUserHobbies);
+  //     // // check match
+  //     // const isAMatch = checkMatch(currentCardHobbies, _currentUserHobbies);
+  //     console.log("You swiped right");
   //   }
   // }
+  
+  // const [lastDirection, setLastDirection] = useState()
+
+  // const childRefs = useMemo(() => Array(db.length).fill(0).map(i => React.createRef()), [])
+
+  // const swiped = (direction, nameToDelete) => {
+  //   console.log('removing: ' + nameToDelete)
+  //   setLastDirection(direction)
+  //   alreadyRemoved.push(nameToDelete)
+  // }
+
+  // const outOfFrame = (name) => {
+  //   console.log(name + ' left the screen!')
+  //   peopleState = peopleState.filter(person => person.displayName !== displayName)
+  //   setPeople(peopleState)
+  // }
+
+  // const swipe = (dir) => {
+  //   const cardsLeft = people.filter(person => !alreadyRemoved.includes(person.displayName))
+  //   if (cardsLeft.length) {
+  //     const alreadyRemoved = []
+  //     const toBeRemoved = cardsLeft[cardsLeft.length - 1].name // Find the card object to be removed
+  //     const index = people.map((person => person.displayName).indexOf(toBeRemoved) // Find the index of which to make the reference to
+  //     alreadyRemoved.push(toBeRemoved)  // Make sure the next card gets removed next time if this card do not have time to exit the screen
+  //     childRefs[idx].current.swipe(dir) // Swipe the card!
+  //   }
+  // }
+
+  const onSwipe = (direction) => {
+    console.log('You swiped: ' + direction)
+  }
 
   const onRightClick = () => {
       console.log("currentUserHobbies on swipe", _currentUserHobbies);
@@ -32,12 +64,26 @@ const FMCard = ({ person, currentUserHobbies }) => {
       const isAMatch = checkMatch(currentCardHobbies, _currentUserHobbies);
       console.log(isAMatch);
   };
+ 
 
   return (
     <>
       <TinderCard
-        // onSwipe={(dir) => onSwipe(dir)}
+      //  ref={childRefs[idx]}
+      //   onSwipe={(dir) => swiped (dir, person.displayName &&
+      //     person.distance &&
+      //     person.age &&
+      //     person.location &&
+      //     person.onelineTagline)}
+
+      //   onCardLeftScreen={() => outOfFrame(person.displayName &&
+      //     person.distance &&
+      //     person.age &&
+      //     person.location &&
+      //     person.onelineTagline)}
+      //   onSwipe={onSwipe}
         className="swipe"
+        
         key={
           person.displayName &&
           person.distance &&
@@ -83,6 +129,10 @@ const FMCard = ({ person, currentUserHobbies }) => {
         </div>
       </TinderCard>
       <SwipeButtons onRightClick={onRightClick} />
+      {/* <div className='buttons'>
+        <button onClick={() => swipe('left')}>Swipe left!</button>
+        <button onClick={() => swipe('right')}>Swipe right!</button>
+      </div> */}
     </>
   );
 };
